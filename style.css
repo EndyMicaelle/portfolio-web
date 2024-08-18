@@ -35,3 +35,45 @@ body {
     background-color: var(--bg-color-01);
     color: var(--text-color);
 }
+
+header {
+    position: fixed; /* Fixar no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem; /* Pega o valor baseado na config raiz html 1 vez mais 10% */
+    background-color: var(--bg-color-01);
+    display: flex; /* Modo que ela vai se comportar */
+    justify-content: space-between; /* Como vai ajustar o conteudo - espaço que tem entre eles */
+    align-items: center;
+    z-index: 100; /* Deixar ele a 100 camadas a cima */
+
+    border: solid 1px var(--color-02);
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600; /* Ficar em negrito */
+    cursor: default; /* Não muda o cursor para selecionar o texto */
+}
+
+.nav a { /* Navegador na partes dos links */
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: 0.4s; /* Tempo que ele leva pra acontecer alguma coisa */
+
+    border: solid 1px var(--color-02);
+}
+
+.nav a:hover { /* Passar mouse sobre os links */
+    color: var(--main-color); /* Cor principal */
+}
+
+section {
+    min-height: 100vh; /* Altura minima - vh: viewport height altura q tem a tela */
+    padding: 6rem 6rem 2rem;
+
+    border: solid 1px var(--color-02);
+}
