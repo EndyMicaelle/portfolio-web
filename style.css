@@ -77,3 +77,111 @@ section {
 
     border: solid 1px var(--color-02);
 }
+
+span {
+    color: var(--main-color);
+}
+
+.home, .about { /* home e about terem as mesmas config. */
+    display: flex; 
+    flex-direction: row; /* Alinha os elementos lado a lado */
+    justify-content: space-evenly; /* Ajustar o conteudo - distribui cada bloco de uma forma igual */
+    align-items: center;
+}
+
+.home-img {
+    border-right: solid 0.6rem; /* Borda a direita */
+    border-bottom: solid 0.6rem; /* Borda de baixo */
+    border-image: linear-gradient(135deg, transparent 50%,var(--main-color)) 1;
+}
+
+.about-img {
+    border-left: solid 0.6rem; /* Borda a direita */
+    border-bottom: solid 0.6rem; /* Borda de baixo */
+    border-image: linear-gradient(225deg, transparent 50%,var(--main-color)) 1;
+}
+
+.home-img img, .about-img img { /* Alterar img dentro das classes */
+    width: 100%;
+}
+
+.about { /* Cor de fundo do about */
+    background-color: var(--bg-color-02);
+}
+
+.home-content, .about-content {
+    width: 45%; /* Aumenta o tamanho */
+}
+
+.home-content h1, .about-content h1 { /* Aumentar tamanho dos h1 */
+    font-weight: 700;
+    line-height: 1.3; /* Altura da linha */
+
+    font-size: 2.7rem; /* TESTE */
+}
+
+.home-content h3, .about-content h3 { /* Aumentar tamanho dos h3 */
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.home-content p, .about-content p { /* Todos os paragrafos dentro do home-cont e about-cont vão ter essas confg */
+    margin-top: 1.2rem; /* Margem de cima */
+    text-align: justify;
+}
+
+.services h2,
+.portfolio h2,
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.services-container { /* Colocou elementos em linhas e lado a lado */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Vai colocar o mx q der pra cima o icone */
+    min-height: 25rem; /* Ter o mesmo tamanho min */
+    margin-bottom: 1.5rem; /* Pra afastar um elemnto do outro */
+}
+
+.services-container .services-box { /* Inserir bordas nos elemntos */
+    padding: 2rem 1rem 2.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: solid 0.15rem var(--bg-color-01);
+    background-color: var(--bg-color-02);
+    transition: 0.5s ease; /* Vem e volta de forma suave */
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color); /* Qdo passa o cursor fica na cor */
+    transform: scale(1.0); /* aumenta suavemente */
+}
+
+.services-box i {
+    font-size: 4.3rem;
+    color: var(--main-color); /* Cores dos icones */
+}
+
+.services-box h3 {
+    font-size: 1.5rem; /* Tamanho dos h3 */
+}
+
+.services-box p {
+    margin: 0.5rem;
+    letter-spacing: 0.1; /* Espaçamento entre as letras */
+    /* N lines ... */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Ficar com 4 linhas */
+    -webkit-box-orient: vertical; /* Horientação dele */
+    overflow: hidden; /* Tudo que sobrou dos trs ponitnhos ele esconde */
+    text-overflow: ellipsis; 
+}
