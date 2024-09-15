@@ -313,7 +313,7 @@ footer {
     font-size: 2rem;
     color: var(--main-color);
     margin: 1.8rem 0.5rem /* afasta os elementos */
-    transition: 0.5s ease;
+    transition: 0.5 ease;
 }
 
 .social-media a:hover {
@@ -372,3 +372,105 @@ footer {
 }
 /**** menu hamburguer ****/
 
+/*** Media queries -> Ajustes conforme os dispositivos***/
+
+/*** Extra Small (xs): Smartphone (portrait) ***/
+@media  (min-width: 0px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .nav {
+    display: none;
+}
+
+    .nav-responsive {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+}
+
+    section {
+        padding: 6rem 2.5rem;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .home-content, .about-content {
+        width: 100%;
+    }
+
+    .home-content div {
+        text-align: center; /* centralizou os botoes */
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700; /* negrito */
+        line-height: 1.3;
+    }
+
+    .services-container {
+        flex-direction: column; /* fica embaixo da outra */
+        align-items: center;
+    }
+
+    .services-box {
+        width: 100%;
+    }
+
+    header {
+        background-color: var(--color-01);
+    }
+}
+
+/*** Small (sm): Smartphone (landscape) celular deitado ***/
+@media (min-width: 576px) {
+
+    .home-img, .about-img {
+        width: 65%;
+        max-width: 65%;
+    }
+
+    .services-box {
+        width: 70%;
+    }
+    
+    header {
+        background-color: var(--color-02);
+    }
+}
+
+/*** Medium (md): Tablet ***/
+@media (min-width: 768px) {
+    
+    header {
+        background-color: var(--color-03);
+    }
+}
+
+/*** Large (lg): Notbook ***/
+@media (min-width: 992px) {
+    
+    header {
+        background-color: var(--color-04);
+    }
+}
+
+/*** Extra Large (xl): Desktop ***/
+@media (min-width: 1200px) {
+    
+    header {
+        background-color: var(--color-05);
+    }
+}
+
+/*** Media query ***/
